@@ -1,0 +1,536 @@
+/*** Panel tabs CSS ***********************/
+div.row {
+    position: relative;
+    width: 1170px;
+    margin: 0;
+    padding: 0;
+}
+div.container {
+    position: relative;
+}
+div#form-row.row {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+div.col-md-12 {
+    position: relative;
+    margin: 0 auto;
+}
+#tab-links {
+    display: none;
+}
+div.panel-body {
+    position: relative;
+    left: 0;
+}
+div.panel.panel-default {
+    position: relative;
+    left: -15px;
+}
+form.form-horizontal {
+    position: relative;
+    margin-right: 0;
+}
+div#form-panel.panel.panel-default {
+    position: relative;
+    left: 0;
+    width: 1134px;
+}
+div.col-mid-8.col-mid-offset-2 {
+    position: relative;
+    margin-left: 0;
+}
+div.panel-heading {
+    position: relative;
+    background: rgba(205,223,140,.75);
+}
+#panel-title {
+    background: rgba(205,223,140,.75);
+    color: #000000;
+}
+#admin-li, #hcpro-li {
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+}
+ul#click-tabs {
+    background-color: rgba(0,163,219,1);
+    margin-bottom: 0;
+}
+ul#click-tabs.nav {
+    background-color: rgba(0,163,219,1);
+}
+.nav-tabs {
+    background-color: rgba(0,163,219,1);
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+}
+.nav-tabs > li, .nav-pills > li {
+    float: none;
+    display: inline-block;
+    *display: inline; /* ie7 fix */
+    zoom: 1; /* hasLayout ie7 trigger */
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+}
+#click-tabs > li {
+  border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+}
+.nav-tabs, .nav-pills {
+    text-align: center;
+}
+ul.nav.nav-tabs {
+    position: relative;
+    margin: 0 auto 20px auto;
+}
+ul#click-tabs.nav.nav-tabs, div.panel-heading {
+    background-color: rgba(48,151,209,1);
+}
+.panel {
+    border-bottom: 0;
+    border-left: 0;
+    border-right: 0;
+}
+div.panel.panel-default {
+    background: transparent;
+}
+div#form-panel {
+    background-color: rgba(255,255,255,1);
+}
+div#form-head {
+    background-color: rgba(255,255,255,1);
+}
+#user-login-form {
+    position: relative;
+    width: 730px;
+    margin: 0 0 0 0;
+}
+#user-form-panel {
+    position: relative;
+    left: -15px;
+    margin-right: 0;
+}
+#user-panel-body {
+    position: relative;
+}
+#wc-col-12 {
+    position: relative;
+    width: 1100px;
+    margin: 0 0 0 0;
+}
+#inner-user-container {
+    position: relative;
+    padding: 0;
+}
+.panel.with-nav-tabs.panel-primary {
+    position: relative;
+    border: none;
+    background-color: rgba(214,206,186,1);
+}
+.panel.with-nav-tabs .panel-heading{
+    padding: 5px 5px 0 5px;
+}
+.panel.with-nav-tabs .nav-tabs{
+    border-bottom: none;
+}
+.panel.with-nav-tabs .nav-justified{
+    margin-bottom: -1px;
+}
+#wc-panel-head {
+    position: relative;
+    width: 1166px;
+}
+#main-spread {
+    position: relative;
+    min-width: 100%;
+    max-width: 1170px;
+}
+#pb-zero {
+    position: relative;
+    max-width: 1170px;
+}
+#pb-one {
+    position: relative;
+    min-width: 100%;
+    max-width: 320px;
+}
+#pb-inside {
+    position: relative;
+    min-width: 100%;
+    max-width: 320px;
+}
+#hdg-one {
+    position: relative;
+    min-width: 100%;
+    margin-bottom: 0;
+    max-width: 320px;
+}
+.form-container {
+    position: relative;
+    max-width: 1170px;
+}
+/********************************************************************/
+
+/*** PANEL PRIMARY ***/
+.with-nav-tabs.panel-primary .nav-tabs > li > a,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: rgba(255,255,255,1);
+}
+.with-nav-tabs.panel-primary .nav-tabs > .open > a,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > .open > a:focus,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li > a:focus {
+    color: rgba(255,255,255,1);
+    background-color: rgba(0,163,219,1);
+    border-color: transparent;
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.active > a:focus {
+    color: rgba(0,163,219,1);
+    background-color: rgba(255,255,255,1);
+    border-color: rgba(0,163,219,1);
+    border-bottom-color: transparent;
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu {
+    background-color: rgba(0,163,219,1);
+    border-color: rgba(0,163,219,1);
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a {
+    color: rgba(255,255,255,1);
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > li > a:focus {
+    background-color: rgba(0,163,219,1);
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+}
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:hover,
+.with-nav-tabs.panel-primary .nav-tabs > li.dropdown .dropdown-menu > .active > a:focus {
+    background-color: rgba(48,151,209, 1);
+    border-radius: 4px 4px 0 0;
+    -moz-border-radius: 4px 4px 0 0;
+    -webkit-border-radius: 4px 4px 0 0;
+}
+
+.button.btn.btn-primary {
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+}
+/*** CSS Styles For The Form Panels ***/
+.wizard {
+    position: relative;
+    margin: 20px 0;
+    background: rgba(255,255,255,1);
+}
+.wizard .nav-tabs {
+    position: relative;
+    margin: 20px auto 0 auto;
+    border-bottom-color: rgba(255,255,255,1);
+}
+.wizard > div.wizard-inner {
+    position: relative;
+    bottom: 20px;
+    background: rgba(255,255,255,1);
+}
+.connecting-line {
+    height: 2px;
+    background: rgba(214,206,186,1);
+    position: absolute;
+    width: 90%;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 20.95%;
+    z-index: 1;
+}
+.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+    color: rgba(0,0,0,1);
+    cursor: default;
+    border: 0;
+    border-bottom-color: rgba(255,255,255,1);
+}
+span.round-tab {
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    border-radius: 4px;
+    background: rgba(255,255,255,1);
+    border: 1px solid rgba(214,206,186,1);
+    z-index: 2;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 25px;
+}
+span.round-tab i{
+    color: rgba(0,0,0,1);
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: .8em;
+}
+.wizard li.active span.round-tab {
+    color: rgba(0,0,0,1);
+    background: rgba(214,206,186,1);
+    border: 1px solid rgba(214,206,186,1);
+}
+.wizard li.active span.round-tab i{
+    color: rgba(0,0,0,1);
+}
+span.round-tab:hover {
+    color: rgba(0,0,0,1);
+    border: 1px solid rgba(214,206,186,1);
+    background: rgba(214,206,186,1);
+}
+.wizard .nav-tabs > li {
+    width: 23.2%;
+}
+.wizard li:after {
+    content: " ";
+    position: absolute;
+    left: 30%;
+    opacity: 0;
+    margin: 0 auto;
+    bottom: 0;
+    border: 5px solid transparent;
+    border-bottom-color: rgba(214,206,186,1);
+    transition: 0.2s ease-in-out;
+}
+.wizard li.active:after {
+    content: " ";
+    position: absolute;
+    left: 30%;
+    opacity: 1;
+    margin: 0 auto;
+    bottom: 0;
+    border: 15px solid transparent;
+    border-bottom-color: rgba(214,206,186,1);
+}
+ul.nav.nav-tabs {
+    position: relative;
+    top: 0;
+    background: rgba(255,255,255,1);
+}
+.wizard .nav-tabs > li a {
+    width: 50px;
+    height: 50px;
+    margin: 15px auto;
+    border-radius: 100%;
+    padding: 0;
+}
+.wizard .nav-tabs > li a:hover {
+    background: rgba(255,255,255,1);
+}
+.wizard .tab-pane {
+    position: relative;
+    padding-top: 0;
+}
+.tab-pane.active {
+    position: relative;
+    width: 100%;
+}
+.wizard h3 {
+    margin-top: 0;
+}
+#app-help {
+    width: 1170px;
+    text-align: center;
+    padding: 10px 0 0 0;
+}
+footer {
+    position: relative;
+    top: -80px;
+}
+@media( min-width : 585px ) {
+    .wizard {
+        width: 90%;
+        height: auto !important;
+        margin: 0;
+    }
+    #wizard-row {
+        position: relative;
+        left: 0;
+        margin-left: 0;
+    }
+    span.round-tab {
+        font-size: 16px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 55%;
+        background: rgba(255,255,255,1);
+    }
+}
+@media( min-width : 1200px ) {
+    /** General Body CSS **/
+    div#pb-zero.panel-body {
+        width: 1170px;
+    }
+    /** General Welcome Page | Login/Register CSS **/
+    .form-horizontal, .panel-body, .help-desk {
+        position: relative;
+    }
+    .form-horizontal {
+        max-width: 770px;
+    }
+    .help-desk {
+        top: -15px;
+    }
+    #fg-ur-1, #fg-ur-2, #fg-ur-3, #fg-ur-4,
+    #fg-ur-5, #fg-ur-6, #fg-ur-7, #fg-ar-1,
+    #fg-ar-2, #fg-ar-3, #fg-ar-4, #fg-ar-5,
+    #fg-ar-6, #fg-ar-7 {
+        position: relative;
+        left: 15px;
+    }
+    #fg-ur-btn, #fg-ar-btn {
+        position: relative;
+        left: 155px;
+    }
+    #fg-user-pw, #fg-user-username, #fg-user-ilb, #user-submit-block {
+        position: relative;
+        max-width: 100%;
+    }
+    #label-user-username, #label-user-pw {
+        position: absolute;
+        right: 40px;
+    }
+    #fg-ul-3, #fg-al-3 {
+        position: relative;
+        left: -12px;
+    }
+    #div-ul-btn, #div-al-btn {
+        position: relative;
+        left: 50px;
+    }
+    #fg-ul-1, #fg-ul-2, #fg-al-1, #fg-al-2 {
+        position: relative;
+        left: 25px;
+    }
+    /** General Home Page | Dashboard CSS **/
+    .dropdown-menu {
+        position: relative;
+        background: rgba(48,151,209,1);
+    }
+    .dropdown-menu li a, .dropdown-menu li a:hover {
+        color: rgba(255,255,255,1);
+        background: rgba(48,151,209,1);
+    }
+    #wc-panel-head {
+        position: relative;
+        left: 0;
+        margin: 0 auto;
+        height: 40px;
+        line-height: 40px;
+        background: rgba(48,151,209,1);
+        border-radius: 4px;
+    }
+    #wc-req-head-title {
+        position: absolute;
+        top: .75%;
+        height: 40px;
+        text-align: left;
+        vertical-align: middle;
+        text-indent: 20px;
+        color: rgba(255,255,255,1);
+    }
+    #username, #password, #firstname, #lastname, #title, #email, #password-confirm {
+        position: relative;
+        max-width: 200px;
+        left: 20px;
+    }
+    .wizard {
+        left: -12px;
+        margin-left: 0;
+        width: 1130px;
+        height: auto !important;
+    }
+    #fg-fw-1, #fg-fw-2, #fg-fw-3, #fg-fw-4,
+    #fg-fw-5, #fg-fw-6, #fg-fw-7, #fg-fw-8,
+    #fg-fw-9, #fg-fw-10, #fg-fw-11, #fg-fw-12,
+    #fg-fw-13, #fg-fw-14, #fg-fw-15, #fg-fw-16 {
+        position: relative;
+        left: 88px;
+    }
+    #button-group-one, #button-group-two, #button-group-three, #button-group-four {
+        position: relative;
+        left: -395px;
+        max-width: 360px;
+    }
+    #patient-info-title, #wc-info-title {
+        position: relative;
+        top: -10px;
+        left: 0;
+        margin: 0 auto;
+        max-width: 360px;
+        height: 40px;
+        line-height: 40px;
+        text-indent: 20px;
+        color: rgba(255,255,255,1);
+        background: rgba(48,151,209,1);
+        border-radius: 4px;
+    }
+    .select-picker {
+        position: relative;
+        left: 35px;
+    }
+    .control-label {
+        position: relative;
+        left: 35px;
+    }
+    span.round-tab {
+        font-size: 16px;
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+    .wizard .nav-tabs > li a {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+    }
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 44%;
+        background: rgba(255,255,255,1);
+    }
+    /** General Password Reset Page CSS **/
+    .pw-reset-panel, .pw-reset-body, .pw-reset-heading {
+        position: relative;
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+}

@@ -1,0 +1,99 @@
+Select Group #1
+
+@if (isset($units))
+@foreach ($units as $unit)
+    <option value="{{$unit->id}}">{{$unit->unit}}</option>
+@endforeach
+@endif
+
+Select Group #6
+
+@if(isset($therapist_titles))
+@foreach($therapist_titles as $title)
+    <option value="{{$title->id}}">{{$title->title_abbreviation}}</option>
+@endforeach
+@endif
+
+Select Group #8
+
+@if(isset($wheelchair_types))
+@foreach($wheelchair_types as $wc_type)
+    <option value="{{$wc_type->id}}">{{$wc_type->wc_type}}</option>
+@endforeach
+@endif
+
+Select Group #11
+
+@if(isset($wheelchair_dimensions))
+@foreach($wheelchair_dimensions as $wc_dim)
+    <option value="{{$wc_dim->id}}">{{$wc_dim->wc_dimensions}}</option>
+@endforeach
+@endif
+
+Select Group #12
+
+@if(isset($wheelchair_heights))
+@foreach($wheelchair_heights as $wc_height)
+    <option value="{{$wc_height->id}}">{{$wc_height->wc_height}}</option>
+@endforeach
+@endif
+
+Select Group #13
+
+@if(isset($wheelchair_backs))
+@foreach($wheelchair_backs as $wc_back)
+    <option value="{{$wc_back->id}}">{{$wc_back->wc_back_type}}</option>
+@endforeach
+@endif
+
+Select Group #14
+
+@if(isset($cushion_types))
+@foreach($cushion_types as $cush_type)
+    <option value="{{$cush_type->id}}">{{$cush_type->cushion_type}}</option>
+@endforeach
+@endif
+
+Select Group #15
+
+@if(isset($cushion_dimensions))
+@foreach($cushion_dimensions as $cush_dim)
+    <option value="{{$cush_dim->id}}">{{$cush_dim->cushion_dimensions}}</option>
+@endforeach
+@endif
+
+Select Group #16
+
+@if(isset($armrest_types))
+@foreach($armrest_types as $armrest)
+    <option value="{{$armrest->id}}">{{$armrest->armrest_type}}</option>
+@endforeach
+@endif
+
+JQuery:
+
+$(document).on('change','.productname',function () {
+            var prod_id=$(this).val();
+
+            var a=$(this).parent();
+            console.log(prod_id);
+            var op="";
+            $.ajax({
+                type:'get',
+                url:'{!!URL::to('findPrice')!!}',
+                data:{'id':prod_id},
+                dataType:'json',//return data will be json
+                success:function(data){
+                    console.log("price");
+                    console.log(data.price);
+
+                    // here price is coloumn name in products table data.coln name
+
+                    a.find('.prod_price').val(data.price);
+
+                },
+                error:function(){
+
+                }
+            });
+        });

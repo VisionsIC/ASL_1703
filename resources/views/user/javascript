@@ -1,0 +1,54 @@
+$(document).ready(function() {
+    $(document).on('change', '.unit', function () {
+        console.log("hmm, it changed");
+        var unit_id = $(this).val();
+        console.log(unit_id);
+        var unit = $(this).parent();
+        var opt_tag = " ";
+        $.ajax({
+            type: 'get',
+            url: '{!!URL::to(',getPatientNameData:')!!}',
+            data: {'id': unit_id},
+            success: function (data) {
+                console.log('success');
+                console.log(data);
+                console.log(data.length);
+                opt_tag += '<option value="0" selected disabled>Choose Patient</option>';
+                for (var i = 0; i < data.length; i++) {
+                    opt_tag += '<option value="' + data[i].id + '">' + data[i].patientname + '</option>';
+                }
+                unit.find('.patientname').html(" ");
+                unit.find('.patientname').append(opt_tag);
+            },
+            error: function () {
+            }
+        });
+    });
+    // Select Option AJAX Request for
+    $(document).on('change','.patientname',function () {
+        var patientname_id=$(this).val();
+
+        var pn=$(this).parent();
+        console.log(patientname_id);
+        var opt_tag="";
+        $.ajax({
+            type:'get',
+            url:'{!!URL::to(',ajaxJsonResponse:')!!}',
+            data:{'id':patientname_id},
+            dataType:'json',// return data will be json
+            success: function (data) {
+                console.log('success');
+                console.log(data);
+                console.log(data.length);
+                opt_tag += '<option value="0" selected disabled>Choose Room</option>';
+                for (var i = 0; i < data.length; i++) {
+                    opt_tag += '<option value="' + data[i].id + '">' + data[i].room + '</option>';
+                }
+                pn.find('.room').html(" ");
+                pn.find('.room').append(opt_tag);
+            },
+            error: function () {
+            }
+        });
+    });
+});
