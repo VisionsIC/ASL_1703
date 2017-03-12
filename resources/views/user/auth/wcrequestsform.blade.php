@@ -59,9 +59,7 @@
                                                     <label for="unit" class="col-md-4 control-label">Unit</label>
                                                     <select title="unit" id="unit_id" class="units form-control select-picker show-tick" name="unit" data-style="btn-info" autofocus>
                                                         <option value="0" disabled selected>Select Unit</option>
-                                                        @foreach(App\Unit::all() as $unit)
-                                                            <option value="{{$unit->id}}">{{$unit->unit}}</option>
-                                                        @endforeach
+                                                        <!-- Unit Select Form Group # 1 (For Loop Code Goes Here) -->
                                                     </select>
                                                 </p>
                                                 <!-- Patient Name Select Form Group # 2 (JQuery Control) -->
@@ -108,9 +106,7 @@
                                                     <label for="therapist_title" class="col-md-4 control-label">Therapist Title</label>
                                                     <select title="therapist_title" id="therapist_title" class="therapist_title form-control select-picker show-tick" name="therapist_title" data-style="btn-info" autofocus>
                                                         <option value="0" disabled selected>Select Therapist Title</option>
-                                                        @foreach(App\TherapistTitle::all() as $title)
-                                                            <option value="{{$title->id}}">{{$title->title_abbreviation}}</option>
-                                                        @endforeach
+                                                        <!-- Therapist Title Select Form Group # 6 (For Loop Code Goes Here) -->
                                                     </select>
                                                 </p>
                                                 <!-- Therapist Name Select Form Group # 7 (JQuery Control) -->
@@ -125,9 +121,7 @@
                                                     <label for="wc_type" class="col-md-4 control-label">Wheelchair Type</label>
                                                     <select title="wc_type" id="wc_type" class="wc_types form-control select-picker show-tick" name="wc_type" data-style="btn-info" autofocus>
                                                         <option value="0" disabled selected>Select Wheelchair Type</option>
-                                                        @foreach(App\WheelchairType::all() as $wc_type)
-                                                            <option value="{{$wc_type->id}}">{{$wc_type->wc_type}}</option>
-                                                        @endforeach
+                                                        <!-- Wheelchair Type Select Form Group # 8 (For Loop Code Goes Here) -->
                                                     </select>
                                                 </p>
                                                 <!-- Step 3 Button Form Group (page 2) -->
@@ -161,9 +155,7 @@
                                                     <label for="wc_dimensions" class="col-md-4 control-label">Wheelchair Dimensions</label>
                                                     <select title="wc_dimensions" id="wc_dimensions" class="wc_dimensions form-control select-picker show-tick" name="wc_dimensions" data-style="btn-info" autofocus>
                                                         <option value="0" disabled selected>Select Wheelchair Dimensions</option>
-                                                        @foreach(App\WheelchairDimension::all() as $wc_dems)
-                                                            <option value="{{$wc_dems->id}}">{{$wc_dems->wc_dimensions}}</option>
-                                                        @endforeach
+                                                        <!-- Wheelchair Dimensions Select Form Group # 11 (For Loop Code Goes Here) -->
                                                     </select>
                                                 </p>
                                                 <!-- Wheelchair Height Select Form Group # 12 -->
@@ -171,9 +163,7 @@
                                                     <label for="wc_height" class="col-md-4 control-label">Wheelchair Height</label>
                                                     <select title="wc_height" id="wc_height" class="wc_heights form-control select-picker show-tick" name="wc_height" data-style="btn-info" autofocus>
                                                         <option value="0" disabled selected>Select Wheelchair Height</option>
-                                                        @foreach(App\WheelchairHeight::all() as $wc_height)
-                                                            <option value="{{$wc_height->id}}">{{$wc_height->wc_height}}</option>
-                                                        @endforeach
+                                                        <!-- Wheelchair Height Select Form Group # 12 (For Loop Code Goes Here) -->
                                                     </select>
                                                 </p>
                                                 <!-- Step 4 Button Form Group (page 3) -->
@@ -193,9 +183,7 @@
                                                     <label for="wc_back" class="col-md-4 control-label">Wheelchair Back</label>
                                                     <select title="wc_back" id="wc_back" class="wc_back_type form-control select-picker show-tick" name="wc_back" data-style="btn-info" autofocus>
                                                         <option value="0" disabled selected>Select Wheelchair Back</option>
-                                                        @foreach(App\WheelchairBack::all() as $wc_back)
-                                                            <option value="{{$wc_back->id}}">{{$wc_back->wc_back_type}}</option>
-                                                        @endforeach
+                                                        <!-- Wheelchair Back Select Form Group # 13 (For Loop Code Goes Here) -->
                                                     </select>
                                                 </p>
                                                 <!-- Cushion Type Select Form Group # 14 -->
@@ -203,9 +191,7 @@
                                                     <label for="cushion_type" class="col-md-4 control-label">Cushion Type</label>
                                                     <select title="cushion_type" id="cushion_type" class="cushion_type form-control select-picker show-tick" name="cushion_type" data-style="btn-info" autofocus>
                                                         <option value="0" disabled selected>Select Cushion Type</option>
-                                                        @foreach(App\CushionType::all() as $cushion_type)
-                                                            <option value="{{$cushion_type->id}}">{{$cushion_type->cushion_type}}</option>
-                                                        @endforeach
+                                                        <!-- Cushion Type Select Form Group # 14 (For Loop Code Goes Here) -->
                                                     </select>
                                                 </p>
                                                 <!-- Cushion Dimensions Select Form Group # 15 -->
@@ -213,9 +199,7 @@
                                                     <label for="cushion_dimensions" class="col-md-4 control-label">Cushion Dimensions</label>
                                                     <select title="cushion_dimensions" id="cushion_dimensions" class="cushion_dimensions form-control select-picker show-tick" name="cushion_dimensions" data-style="btn-info" autofocus>
                                                         <option value="0" disabled selected>Select Cushion Type</option>
-                                                        @foreach(App\CushionDimension::all() as $cushion_dem)
-                                                            <option value="{{$cushion_dem->id}}">{{$cushion_dem->cushion_dimensions}}</option>
-                                                        @endforeach
+                                                        <!-- Cushion Dimensions Select Form Group # 15 (For Loop Code Goes Here) -->
                                                     </select>
                                                 </p>
                                                 <!-- Armrest Type Select Form Group # 16 -->
@@ -223,9 +207,7 @@
                                                     <label for="armrest_type" class="col-md-4 control-label">Armrest Type</label>
                                                     <select title="armrest_type" id="armrest_type" class="armrest_type form-control select-picker show-tick" name="armrest_type" data-style="btn-info" autofocus>
                                                         <option value="0" disabled selected>Select Armrest Type</option>
-                                                        @foreach(App\ArmrestType::all() as $armrest_type)
-                                                            <option value="{{$armrest_type->id}}">{{$armrest_type->armrest_type}}</option>
-                                                        @endforeach
+                                                        <!-- Armrest Type Select Form Group # 16 (For Loop Code Goes Here) -->
                                                     </select>
                                                 </p>
                                                 <!-- Submit Button Form Group (page 4) -->
