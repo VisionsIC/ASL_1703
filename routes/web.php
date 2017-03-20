@@ -15,6 +15,12 @@ Route::get('/', function () {
 Route::get('registration', function() {
     return view('registration');
 });
+// User Profile route.
+Route::get('profiles/user-profile', 'UserController@profile');
+// Bootstrap Test Route.
+Route::get('bootstrap', function () {
+    return view('firstbootstrap');
+});
 // Authentication Routes
 Auth::routes();
 // RERA Dashboard Home Wheelchair Requests Routing.
@@ -25,6 +31,15 @@ Route::get('findDiagnosis', 'HomeController@findDiagnosis'); // Route to control
 Route::get('findTherapistNames', 'HomeController@findTherapistNames'); // Route to controller that handles SELECT tag #7
 Route::get('findInpatientWcModels', 'HomeController@findInpatientWcModels'); // Route to controller that handles SELECT tag #9
 Route::get('findInpatientWcBrands', 'HomeController@findInpatientWcBrands'); // Route to controller that handles SELECT tag #10
+// User Wheelchair Requests Form Routing.
+//Route::get('wc-requests-form', 'Auth\WcRequestsController@showWcRequestsForm');
+//Route::post('wc-requests-form', 'Auth\WcRequestsController@wc-requests-form');
+// Group Routing within the Auth.
+//Route::group(['middleware' => ['auth']], function() {
+// all routes here will require the user to be logged in.
+    //Route::get('user-profile/{slug}', [
+        //'uses' => 'ProfilesController@index']);
+//});
 // User Login Form Routing.
 Route::get('user-login', 'Auth\LoginController@showLoginForm');
 Route::post('user-login', 'Auth\LoginController@login');
@@ -56,6 +71,16 @@ Route::prefix('admin')->group(function () {
 // RERA Dashboard Admin Landing Page Routing.
     Route::get('admin', 'AdminController@index')->name('admin.dashboard');
 });
+
 //Route::post('admin/logout', 'Auth\LoginController@logout');
 
 
+// API Test 2 - working (somewhat).
+Route::get('testview','TestController@index'); // Opens Form View
+Route::get('findPatientName','TestController@findPatientName'); // Route to controller that handles SELECT tag #2
+Route::get('findRoom','TestController@findRoom'); // Route to controller that handles SELECT tag #3
+Route::get('findGender','TestController@findGender'); // Route to controller that handles SELECT tag #4
+Route::get('findDiagnosis','TestController@findDiagnosis'); // Route to controller that handles SELECT tag #5
+Route::get('findTherapistNames','TestController@findTherapistNames'); // Route to controller that handles SELECT tag #7
+Route::get('findInpatientWcModels','TestController@findInpatientWcModels'); // Route to controller that handles SELECT tag #9
+Route::get('findInpatientWcBrands','TestController@findInpatientWcBrands'); // Route to controller that handles SELECT tag #10
