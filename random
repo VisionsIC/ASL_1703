@@ -1,0 +1,29 @@
+## Create new database:
+mysql -u [root] -p -e "create database [asl_rera];"
+## Import the existing database:
+mysql -u[root] -p [asl_rera] < [.sql asl_rera_2017-03-16]-u
+##
+mysql -h 'aaronrobertwilson'@'localhost' -u root -p rootReset a lost MySQL root password
+1)
+sudo service mysql stop
+
+2)
+sudo mysqld_safe --skip-grant-tables &
+
+3)
+mysql -uroot
+*use mysql;
+*update user set password=PASSWORD("mynewpassword") where User='root';
+*flush privileges;
+*quit;
+
+4)
+ps -aux | grep mysql
+sudo kill pid
+
+5)
+sudo service mysql start
+
+6)
+mysql -uroot -p
+

@@ -223,9 +223,7 @@ abstract class AbstractFtpAdapter extends AbstractAdapter
      */
     public function getUsername()
     {
-        $username = $this->safeStorage->retrieveSafely('username');
-
-        return $username !== null ? $username : 'anonymous';
+        return $this->safeStorage->retrieveSafely('username') ?: 'anonymous';
     }
 
     /**

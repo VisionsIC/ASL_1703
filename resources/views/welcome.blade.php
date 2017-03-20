@@ -1,95 +1,40 @@
 <!DOCTYPE html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+<html lang="en">
+@include('partials.head')
+@include('partials.login-nav')
+<body id="rera-body">
+    <!-- Main Page Content Goes Here!!-->
+    <div id="main-user-container" class="container">
+        <ul class="nav nav-tabs tabs" id="tab-links">
+            <li class="active"><a href="#hcpro-login">HealthCare Professional</a></li>
+            <li><a href="#admin-login">Administrator</a></li>
+        </ul>
+    </div>
+    <div id="inner-user-container" class="container">
+        <div class="panel with-nav-tabs panel-primary">
+            <div class="panel-heading">
+                <ul class="nav nav-tabs" id="click-tabs">
+                    <li class="active" id="hcpro-li"><a href="#hcpro-tab" data-toggle="tab"><i class="fa fa-btn fa-plus-square"></i> HealthCare Pro</a></li>
+                    <li id="admin-li"><a href="#admin-tab" data-toggle="tab"><i class="fa fa-btn fa-cog"></i> Administrator</a></li>
+                </ul>
+            </div>
+            <div class="panel-body" id="user-panel-body">
+                <div class="tab-content">
+                    <div class="tab-pane fade in active" id="hcpro-tab">
+                        <div class="tab-pane active" id="hcpro-login">
+                          @include('auth.user-login')
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="admin-tab">
+                        <div class="tab-pane" id="admin-login">
+                          @include('auth.admin-login')
+                        </div>
+                    </div>
                 </div>
             </div>
+            @include('partials.register-footer')
         </div>
-    </body>
+    </div>
+@include('partials.scripts')
+</body>
 </html>

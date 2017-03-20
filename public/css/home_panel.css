@@ -1,0 +1,234 @@
+#rera-body {
+    background-color: rgba(214, 206, 186,1);
+}
+#hd-contain {
+  -webkit-box-shadow: 0 7px 12px 0 rgba(125,123,125,0.56);
+  -moz-box-shadow: 0 7px 12px 0 rgba(125,123,125,0.56);
+  box-shadow: 0 7px 12px 0 rgba(125,123,125,0.56);
+}
+div#hd-contain.container {
+    min-width: 21.5em;
+    min-height: 118px;
+    background-color: rgba(255,255,255,1);
+}
+a.navbar-brand {
+}
+.row, .col-md-8, .col-md-offset-2 {
+    border: none;
+}
+div#app-navbar-collapse.collapse.navbar-collapse {
+    min-height: 85px;
+}
+#top-nav-bg {
+    position: relative;
+    top: 0;
+    height: 90px;
+    background-color: transparent;
+}
+.app-desc .app-title {
+    position: relative;
+    font-weight: bold;
+    font-size: 1.2em;
+    text-align: center;
+}
+.app-desc {
+    top: -20px;
+    color: rgba(48,151,209,1);
+    font-size: 1.2em;
+    border-bottom: 2px solid rgba(48,151,209,1);
+}
+.app-title {
+    top: 20px;
+    right: 38.632478632479%;
+    color: rgba(0,0,0,1);
+    font-size: 1.2em;
+}
+a#admin-reg, a#user-reg {
+    position: relative;
+    top: 17px;
+    right: 15px;
+    min-height: 50px;
+    border-radius: 4px;
+    color: rgba(255,255,255,1);
+    background-color: rgba(48,151,209,1);
+}
+ul#title-header.nav.navbar-nav {
+    position: relative;
+    top: 20px;
+    left: 22.632478632479%;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    margin: 0 auto;
+    min-width: 500px;
+    min-height: 85px;
+    text-align: center;
+}
+svg#mlh-logo {
+    position: relative;
+    top: -20px;
+}
+img#avatar-image {
+    float: left;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 25px;
+}
+a#profile-img-link{
+    position: relative;
+}
+a#profile-img-link:hover:before {
+    position: absolute;
+    background: url('../defaults/avatars/male-edit.png') no-repeat center center;
+    content:"";
+    width: 100%;
+    height: 150px;
+    left: 0;
+}
+.panel.noborder {
+    border: none;
+    box-shadow: none;
+}
+.panel-default.noborder {
+    border: none;
+    box-shadow: none;
+}
+.panel, .panel-default {
+    background: rgba(0, 0, 0, 0);
+}
+#app-navbar-collapse {
+    height: 118px;
+}
+.panel-heading {
+  border-radius: 4px 4px 0 0;
+  -moz-border-radius: 4px 4px 0 0;
+  -webkit-border-radius: 4px 4px 0 0;
+  border: 1px solid rgba(255,255,255,1);
+}
+.panel-body {
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 0 0 4px 4px;
+  -moz-border-radius: 0 0 4px 4px;
+  -webkit-border-radius: 0 0 4px 4px;
+  border: 1px solid rgba(255,255,255,1);
+  -webkit-box-shadow: 0 7px 12px 0 rgba(125,123,125,0.56);
+  -moz-box-shadow: 0 7px 12px 0 rgba(125,123,125,0.56);
+  box-shadow: 0 7px 12px 0 rgba(125,123,125,0.56);
+  margin-bottom: 40px;
+}
+#email-address {
+    position: relative;
+    top: 10px;
+}
+p.help-desk, p.company-info {
+    position: relative;
+    top: 70px;
+    left: -20px;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+}
+#app-crud-help {
+    position: relative;
+    top: 0;
+}
+
+#app-requests-help {
+    position: relative;
+    top: 0;
+    left: 185px;
+}
+#user-reg-help, #admin-reg-help {
+    position: relative;
+    top: 20px;
+}
+
+#user-log-help, #admin-log-help {
+    position: relative;
+    top: 0;
+}
+#al-one-footer {
+    position: relative;
+    top: 110px;
+    left: 20px;
+}
+#reset-password-button, #email-reset-button {
+    position: relative;
+    left: 25px;
+    width: 200px;
+}
+#reset-pass-header, #form-panel-header {
+    position: relative;
+    height: 50px;
+    background-color: rgba(48,151,209,1);
+}
+#reset-pass-header p, #form-panel-header p {
+    position: absolute;
+    top: 0;
+    text-align: left;
+    vertical-align: middle;
+    line-height: 50px;
+    text-indent: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgba(255,255,255,1);
+}
+#reset-pass-panel {
+    position: relative;
+    top: 50px;
+}
+
+div.panel.panel-default p.help-desk {
+    font-size: 1.2em;
+    color: rgba(48,151,209,1);
+}
+#step1, #step2, #step3, #step4 {
+    position: relative;
+    top: 0;
+    left: 40px;
+}
+#steps-monitor {
+    position: relative;
+    top: 0;
+    left: 35px;
+}
+/** Table Example CSS Styles **/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+td, th {
+    border: 1px solid rgba(214,206,186,1);
+    text-align: left;
+    padding: 8px;
+}
+tr:nth-child(even) {
+    background-color: rgba(214,206,186,1);
+    border-top: 1px  solid rgba(48,151,209,1);
+    border-bottom: 1px  solid rgba(48,151,209,1);
+}
+label {
+    position: relative;
+    left: 20px;
+}
+select {
+    position: relative;
+    max-width: 250px;
+    left: 9px;
+}
+.help-desk, #app-help, #register-help, #login-help {
+    position: relative;
+    font-size: 1em;
+    font-weight: bold;
+}
+button#two-button.btn.btn-primary,
+button#three-button.btn.btn-primary,
+button#four-button.btn.btn-primary,
+button#request-button.btn.btn-primary {
+    position: relative;
+    left: 9px;
+    width: 218px;
+}
