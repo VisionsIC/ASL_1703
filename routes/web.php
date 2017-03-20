@@ -17,6 +17,14 @@ Route::get('registration', function() {
 });
 // Authentication Routes
 Auth::routes();
+// RERA Dashboard Home Wheelchair Requests Routing.
+Route::get('findPatientName', 'HomeController@findPatientName'); // Route to controller that handles SELECT tag #2
+Route::get('findRoom', 'HomeController@findRoom'); // Route to controller that handles SELECT tag #3
+Route::get('findGender', 'HomeController@findGender'); // Route to controller that handles SELECT tag #4
+Route::get('findDiagnosis', 'HomeController@findDiagnosis'); // Route to controller that handles SELECT tag #5
+Route::get('findTherapistNames', 'HomeController@findTherapistNames'); // Route to controller that handles SELECT tag #7
+Route::get('findInpatientWcModels', 'HomeController@findInpatientWcModels'); // Route to controller that handles SELECT tag #9
+Route::get('findInpatientWcBrands', 'HomeController@findInpatientWcBrands'); // Route to controller that handles SELECT tag #10
 // User Login Form Routing.
 Route::get('user-login', 'Auth\LoginController@showLoginForm');
 Route::post('user-login', 'Auth\LoginController@login');
@@ -48,16 +56,6 @@ Route::prefix('admin')->group(function () {
 // RERA Dashboard Admin Landing Page Routing.
     Route::get('admin', 'AdminController@index')->name('admin.dashboard');
 });
-
 //Route::post('admin/logout', 'Auth\LoginController@logout');
 
 
-// API Test 2 - working (somewhat).
-Route::get('testview','TestController@index'); // Opens Form View
-Route::get('findPatientName','TestController@findPatientName'); // Route to controller that handles SELECT tag #2
-Route::get('findRoom','TestController@findRoom'); // Route to controller that handles SELECT tag #3
-Route::get('findGender','TestController@findGender'); // Route to controller that handles SELECT tag #4
-Route::get('findDiagnosis','TestController@findDiagnosis'); // Route to controller that handles SELECT tag #5
-Route::get('findTherapistNames','TestController@findTherapistNames'); // Route to controller that handles SELECT tag #7
-Route::get('findInpatientWcModels','TestController@findInpatientWcModels'); // Route to controller that handles SELECT tag #9
-Route::get('findInpatientWcBrands','TestController@findInpatientWcBrands'); // Route to controller that handles SELECT tag #10
