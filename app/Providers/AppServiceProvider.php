@@ -24,10 +24,5 @@ class AppServiceProvider extends ServiceProvider
     public function register()
     {
         //
-        if ($this->app->environment() == 'local') {
-            $this->app->register('Hesto\MultiAuth\MultiAuthServiceProvider');
-            $this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
-            $this->app->register('Collective\Html\HtmlServiceProvider');
-        }
     }
 }
