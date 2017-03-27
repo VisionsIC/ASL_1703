@@ -17,6 +17,15 @@ Route::get('registration', function() {
 });
 // User Profile route.
 Route::get('profiles/user-profile', 'UserController@profile');
+Route::post('user-profile', 'UserController@avatarUpdate');
+// Administrative User Dashboard route.
+Route::resource('crud','CrudController');
+//Route::get ( '/crud/index', 'CrudController@show' );
+Route::post ( '/crud/editRequest', 'CrudController@editRequest' );
+Route::post ( '/crud/addRequest', 'CrudController@addRequest' );
+Route::post ( '/crud/deleteRequest', 'CrudController@deleteRequest' );
+//Route::get('profiles/admin-add-user', 'CrudController@index');
+//Route::post('admin-add-user', 'UserController@store');
 // Bootstrap Test Route.
 Route::get('bootstrap', function () {
     return view('firstbootstrap');
@@ -31,9 +40,16 @@ Route::get('findDiagnosis', 'HomeController@findDiagnosis'); // Route to control
 Route::get('findTherapistNames', 'HomeController@findTherapistNames'); // Route to controller that handles SELECT tag #7
 Route::get('findInpatientWcModels', 'HomeController@findInpatientWcModels'); // Route to controller that handles SELECT tag #9
 Route::get('findInpatientWcBrands', 'HomeController@findInpatientWcBrands'); // Route to controller that handles SELECT tag #10
-// User Wheelchair Requests Form Routing.
-//Route::get('wc-requests-form', 'Auth\WcRequestsController@showWcRequestsForm');
-//Route::post('wc-requests-form', 'Auth\WcRequestsController@wc-requests-form');
+// User Wheelchair Requests Form Routing Group.
+Route::resource('wcr', 'WcRController');
+// Create Wheelchair Requests in the Group.
+Route::get('wcr.create', 'WcRController@index')->name('wcr.index');
+Route::post('/wheelchairs', function () {
+    if (Request::ajax()) {
+        return Response::json(Request::all());
+    }
+});
+//Route::post('/wheelchairs', 'WcRController@store')->name('wcr.store');
 // Group Routing within the Auth.
 //Route::group(['middleware' => ['auth']], function() {
 // all routes here will require the user to be logged in.
@@ -84,3 +100,8 @@ Route::get('findDiagnosis','TestController@findDiagnosis'); // Route to controll
 Route::get('findTherapistNames','TestController@findTherapistNames'); // Route to controller that handles SELECT tag #7
 Route::get('findInpatientWcModels','TestController@findInpatientWcModels'); // Route to controller that handles SELECT tag #9
 Route::get('findInpatientWcBrands','TestController@findInpatientWcBrands'); // Route to controller that handles SELECT tag #10
+
+// PhpMyAdmin Route
+Route::get('/phpmyadmin/', function () {
+    return view('/');
+});

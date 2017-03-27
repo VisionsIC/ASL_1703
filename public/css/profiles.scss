@@ -1,0 +1,63 @@
+$bg: rgba(0, 0, 0, 0.2);
+.bg,
+.overlay {
+  text-align: center;
+}
+img,
+.overlay {
+  transition: .3s all;
+}
+.bg {
+  float: left;
+  max-width: 31%;
+  position: relative;
+  margin: .5%;
+  img {
+    max-width: 100%;
+    margin-bottom: -4px;
+    border-radius: 3px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left:0;
+    bottom: 0;
+    width: 100%;
+    background: $bg;
+    color: #fff;
+    opacity: 0;
+    h2 {
+      margin-top: 20%;
+      font-family: 'Droid Serif', serif;
+      & span {
+        font-family: 'Droid Sans', sans-serif;
+        font-weight: 700;
+      }
+    }
+    p {
+      font-family: 'Julius Sans One', sans-serif;
+    }
+  }
+  &:hover {
+    .overlay {
+      opacity: 1;
+    }
+    img {
+      -webkit-filter:blur(2px);
+      filter: blur(2px);
+    }
+  }
+}
+@media screen and (max-width: 1148px) {
+  .bg {
+    max-width: 48%;
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .bg {
+    float: none;
+    max-width: 60%;
+    margin: .5% auto;
+  }
+}

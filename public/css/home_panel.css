@@ -76,6 +76,18 @@ img#avatar-image {
     border-radius: 50%;
     margin-right: 25px;
 }
+img#avatar-icon {
+    position:absolute;
+    top:10px;
+    left:10px;
+    width:32px;
+    height:32px;
+    border-radius:50%
+}
+a#user-dropdown {
+    position:relative;
+    padding-left:50px;
+}
 a#profile-img-link{
     position: relative;
 }
@@ -231,4 +243,16 @@ button#request-button.btn.btn-primary {
     position: relative;
     left: 9px;
     width: 218px;
+}
+@media screen and (max-width: 1148px) {
+    .bg {
+        max-width: 48%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .bg {
+        float: none;
+        max-width: 60%;
+        margin: .5% auto;
+    }
 }

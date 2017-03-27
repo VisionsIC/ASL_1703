@@ -27,7 +27,7 @@
                                   </div>
                                   <div class="tab-pane fade" id="admin-tab">
                                       <div class="tab-pane" id="admin-login">
-                                        @include('auth.admin-register')
+                                        @include('profiles.admin-add-user')
                                       </div>
                                   </div>
                               </div>

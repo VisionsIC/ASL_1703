@@ -50,7 +50,15 @@
                                                                 </div>
                                                                 <div class="form-horizontal">
                                                                     <!-- Start Of 2nd Tab User Account -->
-
+                                                                    <form enctype="multipart/form-data" method="POST" action="{{ url('user-profile') }}" >
+                                                                        <label>Update Profile Image</label>
+                                                                        <input type="file" name="avatar">
+                                                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                                        <input type="submit" class="pull-right btn btn-primary">
+                                                                    </form>
+                                                                </div>
+                                                                <div>
+                                                                    <li><a id="user-reg" href="{{ url('/crud/index') }}">Administrative User Dashboard</a></li>
                                                                 </div>
                                                                 <p class="help-desk" id="profile-help-pg2" align="center">Having trouble using this App? Dial 484.596.HELP (4357)</p>
                                                             </div>

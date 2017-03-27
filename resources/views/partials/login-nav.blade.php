@@ -140,7 +140,8 @@
                     <li><a id="user-reg" href="{{ url('registration') }}">RERA Registration</a></li>
                 @else
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <a href="#" id="user-dropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <img id="avatar-icon" src="/defaults/avatars/{{ Auth::user()->avatar }}">
                             {{ Auth::user()->username }} <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu" role="menu">

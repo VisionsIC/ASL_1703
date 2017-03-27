@@ -9,11 +9,16 @@
   },
   "devDependencies": {
     "axios": "^0.15.3",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.0",
+    "babel-preset-env": "^1.2.2",
     "bootstrap-sass": "^3.3.7",
     "cross-env": "^3.2.3",
     "jquery": "^3.1.1",
     "laravel-mix": "^0.8.3",
     "lodash": "^4.17.4",
-    "vue": "^2.1.10"
+    "presets": ["env"],
+    "vue": "^2.1.10",
+    "vue-router": "^2.3.0"
   }
 }

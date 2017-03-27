@@ -5,6 +5,11 @@
 <script src="{{ asset('js/tabs.js') }}"></script>
 <!-- Scripts -->
 <script type="text/javascript">
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
     // This block of JQuery code addresses SELECT tag group #2.
     $(document).ready(function() {
         $(document).on('change', '.units', function () {
@@ -12,6 +17,8 @@
             var p_tag = $(this).parent().parent();
             var opt_tag = " ";
             $.ajax({
+                datatype : "application/json",
+                contentType: "text/plain",
                 type: 'get',
                 url: '{!!URL::to('findPatientName')!!}',
                 data: {'id': unit_id},
@@ -38,6 +45,8 @@
             var p_tag = $(this).parent().parent();
             var opt_tag = " ";
             $.ajax({
+                datatype : "application/json",
+                contentType: "text/plain",
                 type: 'get',
                 url: '{!!URL::to('findRoom')!!}',
                 data: {'id':patient_id},
@@ -62,6 +71,8 @@
             var p_tag = $(this).parent().parent();
             var opt_tag = " ";
             $.ajax({
+                datatype : "application/json",
+                contentType: "text/plain",
                 type: 'get',
                 url: '{!!URL::to('findGender')!!}',
                 data: {'id': gender_id},
@@ -86,6 +97,8 @@
             var p_tag = $(this).parent().parent().parent();
             var opt_tag = " ";
             $.ajax({
+                datatype : "application/json",
+                contentType: "text/plain",
                 type: 'get',
                 url: '{!!URL::to('findDiagnosis')!!}',
                 data: {'id': diagnosis_id},
@@ -110,6 +123,8 @@
             var p_tag = $(this).parent().parent();
             var opt_tag = " ";
             $.ajax({
+                datatype : "application/json",
+                contentType: "text/plain",
                 type: 'get',
                 url: '{!!URL::to('findTherapistNames')!!}',
                 data: {'id': name_id},
@@ -134,6 +149,8 @@
             var p_tag = $(this).parent().parent().parent();
             var opt_tag = " ";
             $.ajax({
+                datatype : "application/json",
+                contentType: "text/plain",
                 type: 'get',
                 url: '{!!URL::to('findInpatientWcModels')!!}',
                 data: {'id': wc_brand_id},
@@ -158,6 +175,8 @@
             var p_tag = $(this).parent().parent();
             var opt_tag = " ";
             $.ajax({
+                datatype : "application/json",
+                contentType: "text/plain",
                 type: 'get',
                 url: '{!!URL::to('findInpatientWcBrands')!!}',
                 data: {'id': wc_model_id},
@@ -175,7 +194,48 @@
                 error: function () {
                 }
             });
+            $('#submit-request').submit(function () {
+                var hospitalUnit = $('#hospital-unit').contents();
+                var patientName = $('#patient-name').contents();
+                var roomNumber = $('#room-number').contents();
+                var genderType = $('#gender-type').contents();
+                var diagnosisType = $('#diagnosis-type').contents();
+                var therapistTitle = $('#therapist-title').contents();
+                var therapistName = $('#therapist-name').contents();
+                var wcType = $('#wc-type').contents();
+                var wcModel = $('#wc-model').contents();
+                var wcBrand = $('#wc-brand').contents();
+                var wcDimensions = $('#wc-dimensions').contents();
+                var wcHeight = $('#wc-height').contents();
+                var wcBack = $('#wc-back').contents();
+                var cushionType = $('#cushion-type').contents();
+                var cushionDimensions = $('#cushion-dimensions').contents();
+                var armrestType = $('#armrest-type').contents();
+                $.post('wheelchairs', {
+                    unit: hospitalUnit,
+                    patient_name: patientName,
+                    room: roomNumber,
+                    gender: genderType,
+                    diagnosis_abbreviation: diagnosisType,
+                    title_abbreviation: therapistTitle,
+                    therapist_names: therapistName,
+                    wc_type: wcType,
+                    inpatient_wc_model: wcModel,
+                    inpatient_wc_brand: wcBrand,
+                    wc_dimensions: wcDimensions,
+                    wc_height: wcHeight,
+                    wc_back_type: wcBack,
+                    cushion_type: cushionType,
+                    cushion_dimensions: cushionDimensions,
+                    armrest_type: armrestType},
+                    function (data) {
+                    console.log(data);
+
+
+                });
+            });
         });
+
     });
 </script>
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->

@@ -20,10 +20,10 @@
                                     <article class="panel-body" id="pb-one">
                                         <div class="tab-content">
                                             <div role="tabpanel" class="tab-pane fade in active" id="dash-home-tab">
-                                                @include('auth.wc-requests-crud')
+                                                @include('wcr.index')
                                             </div>
                                             <div class="tab-pane fade" id="wheelchairs-tab">
-                                                @include('auth.wc-requests-form')
+                                                @include('wcr.create')
                                             </div>
                                         </div>
                                     </article>
